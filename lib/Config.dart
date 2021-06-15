@@ -37,10 +37,18 @@ List<String> popularMovies = [
   "dGpIRn4Nqi63JO1RlKxjcPbQSAw.jpg"
 ];
 
-List Shows = ['The Lion King', 'Cook with Comali', 'Loki'];
+List Shows = [
+  'Loki',
+  'The Lion King',
+  'Cook with Comali',
+  'Cars 3',
+  'Vada Chennai'
+];
 
 Map Poster = {
   "Cook with Comali": "9lzcjbkGlkfLk5JM8TPXwDWTjTa.jpg",
   "The Lion King": "1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
   "Loki": "Afp8OhiO0Ajb3NPoCBvfu2pqaeO.jpg",
+  "Cars 3": "rND0GSv8X2Zzs7VhyFAs9BCEmYE.jpg",
+  "Vada Chennai": "wSdXGpSmQBoPXtYRZsafUSGKC8N.jpg"
 };

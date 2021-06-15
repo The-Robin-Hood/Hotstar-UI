@@ -1,9 +1,21 @@
+import 'package:device_preview/plugins.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swipper/flutter_card_swiper.dart';
 import 'package:hotstar_ui/Config.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() {
-  runApp(Hotstar());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      plugins: [
+        const ScreenshotPlugin(),
+        const FileExplorerPlugin(),
+        const SharedPreferencesExplorerPlugin(),
+      ],
+      builder: (context) => Hotstar(),
+    ),
+  );
 }
 
 class Hotstar extends StatelessWidget {
@@ -21,7 +33,7 @@ class Hotstar extends StatelessWidget {
             color: Colors.black,
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 35, horizontal: 10.0),
+                  const EdgeInsets.symmetric(vertical: 50, horizontal: 10.0),
               child: Column(
                 children: [
                   Row(
@@ -58,7 +70,7 @@ class Hotstar extends StatelessWidget {
             child: ListView(
               children: [
                 Container(
-                  margin: EdgeInsets.only(right: 5),
+                  margin: EdgeInsets.only(right: 5, top: 15),
                   child: Row(
                     children: [
                       Container(
@@ -73,12 +85,12 @@ class Hotstar extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
                       Image(
                         image: AssetImage("images/logo.png"),
                         width: 125,
+                      ),
+                      SizedBox(
+                        width: 10,
                       ),
                       TextButton(
                           onPressed: () {},
